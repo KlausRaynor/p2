@@ -1,4 +1,8 @@
 <?php 
-echo 'zombies love brainsss...';
 
-?>
+$cards = '';
+for($i = 0; $i < 10; $i++){
+
+
+}
+
