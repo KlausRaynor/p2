@@ -1,15 +1,18 @@
 <?php 
 
 $wordBank = array('Bob', 'Susan', 'Jerry', 'Alecia', 'Peter', 'John', 'LH', 'Jason', 'Amy', 'Klaus');
-$password = '';
+$password = 'Your password is: ';
 $i = '';
 
 foreach($_GET as $key => $value) {
 	
 	if($key == 'wordNumber'){
+		$symbolArray = array('!', '#', '$', '%', '?', '~', '*');
+		$randomSymbol = array_rand($symbolArray);
 		for($i = 0; $i < $value; $i++) {
 			$randomWord = array_rand($wordBank);
-			$password .= $wordBank[$randomWord];
+			$password .= $wordBank[$randomWord].$symbolArray[$randomSymbol];
+
 		}
 	}else if($key == 'numberRadio' && $value == 'y'){
 		
@@ -22,12 +25,7 @@ foreach($_GET as $key => $value) {
 			$randomSymbol = array_rand($symbolArray);
 			$password .= $symbolArray[$randomSymbol];
 		} else {
-			$password = 'Something went wrong!!';
+			#$password = 'Something went wrong!!';
 			break;
 		}
 }
-
-/*
-	$winner = array_rand($contestants);
-	$contestants[$winner] = 'Winner';
-*/
