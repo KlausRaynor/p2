@@ -36,8 +36,9 @@ ini_set('display_errors', 1);
 <input class='submit' type='submit' class='submit_btn' value='Lets see it!'>
 </form>
 
-
-
+<br>
+<p>  This password generator was inspired by the <a href='http://www.xkcd.com'>XKCD webcomic</a>.</p><br>
+<img src='password_strength.png'>
 </div>
 
 

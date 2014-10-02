@@ -11,7 +11,7 @@ foreach($_GET as $key => $value) {
 			$password = 'YOU MUST FILL IN A VALUE > 0!';
 			break;
 		} else {
-			$symbolArray = array('!', '#', '$', '%', '?', '~', '*');
+			$symbolArray = array('!', '#', '$', '%', '?', '~', '*', '@', '¥', '&');
 			$randomSymbol = array_rand($symbolArray);
 			$password = '';
 			for($i = 0; $i < $value; $i++) {
@@ -28,7 +28,7 @@ foreach($_GET as $key => $value) {
 			$password .= $numberArray[$randomNumber];
 		} else if($key == 'symbolRadio' && $value == 'y') {
 		
-			$symbolArray = array('!', '#', '$', '%', '?', '~', '*');
+			$symbolArray = array('!', '#', '$', '%', '?', '~', '*', '@', '¥', '&');
 			$randomSymbol = array_rand($symbolArray);
 			$password .= $symbolArray[$randomSymbol];
 		} else {
