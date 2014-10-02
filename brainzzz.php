@@ -15,14 +15,14 @@ foreach($_GET as $key => $value) {
 		
 			$numberArray = array('1', '2', '3', '4', '5', '6', '7', '8', '9', '0');
 			$randomNumber = array_rand($numberArray);
-			$password .= $numberKey[$randomNumber];
+			$password .= $numberArray[$randomNumber];
 		} else if($key == 'symbolRadio' && $value == 'y') {
 		
 			$symbolArray = array('!', '#', '$', '%', '?', '~', '*');
 			$randomSymbol = array_rand($symbolArray);
-			$password .= $symbolKey[$randomSymbol];
+			$password .= $symbolArray[$randomSymbol];
 		} else {
-			#$password = 'Something went wrong!!';
+			$password = 'Something went wrong!!';
 			break;
 		}
 }
