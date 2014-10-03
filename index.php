@@ -1,8 +1,8 @@
-
 <?php 
 error_reporting(-1);
-ini_set('display_errors', 1);
+ini_set('display_errors', 'On');
 ?>
+
 
 <!DOCTYPE HTML>
 <html>
@@ -22,13 +22,16 @@ ini_set('display_errors', 1);
 <!--HTML Form -->
 <form action='index.php' method='GET'>
 
+<!--Gives number of words in password -->
 <label for = 'wordNumber'>How many words?</label>
 <input maxlength=1 type=text name='wordNumber' id='number_of_words' size=1> (Max 9)
 
+<!--Adds number to end of password -->
 <label for= 'endNumber'> Want numbers? </label> <br>
 <input class='check' type='radio' name='numberRadio' value='y'> H311 y34h! </input>
 <input class='check' type='radio' name='numberRadio' value='n'> Hell no!</input>
 
+<!--Adds additional random symbol to end of password -->
 <label for='endSymbols'>How about some Symbols?</label><br>
 <input class='check' type='radio' name='symbolRadio' value='y'> YES!!! </input>
 <input class='check' type='radio' name='symbolRadio' value='n'> nope.</input>
